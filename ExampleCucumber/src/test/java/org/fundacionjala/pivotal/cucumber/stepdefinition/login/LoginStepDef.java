@@ -17,13 +17,13 @@ import static org.testng.Assert.assertTrue;
  * @author JorgeForero
  */
 public class LoginStepDef {
-
+    WebDriver driver;
     HomePage home;
 
     @When("^I login with valid credentials$")
     public void iLoginWithValidCredentials() {
         System.setProperty("webdriver.chrome.driver", ".\\tools\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://www.pivotaltracker.com/signin");
@@ -39,6 +39,6 @@ public class LoginStepDef {
     @Then("^I expect the HomePage is displayed$")
     public void itIsExpectedThatTheDisplayUserName() {
         assertTrue(home.getTitle().contains("Dashboard"));
-        //Assert.assertTrue(true);
+        driver.quit();
     }
 }
