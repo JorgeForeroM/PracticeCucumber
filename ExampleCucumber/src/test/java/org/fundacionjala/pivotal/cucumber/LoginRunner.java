@@ -1,4 +1,4 @@
-package org.fundacionjala.pivotal.cucumber.features.login;
+package org.fundacionjala.pivotal.cucumber;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 

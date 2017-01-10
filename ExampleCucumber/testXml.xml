@@ -2,7 +2,7 @@
 <suite>
     <test>
         <classes>
-            <class name="org.fundacionjala.pivotal.cucumber.features.login.LoginRunner"/>
+            <class name="org.fundacionjala.pivotal.cucumber.RunnerTest"/>
         </classes>
     </test>
 </suite>
